@@ -5,9 +5,10 @@ from messages import *
 r = sr.Recognizer()
 engine = p.init()
 
-#engine.say("Hello, Mitra How are you doing?")
-#engine.runAndWait()
+engine.say("Hello, Mitra How are you doing?")
+engine.runAndWait()
 with sr.Microphone() as source:
+    print("Speak now")
     text = r.listen(source)
 
     try:
