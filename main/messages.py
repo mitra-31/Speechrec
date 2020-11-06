@@ -3,10 +3,10 @@ import pyttsx3 as p
 eng = p.init()
 
 def greetings():
-    return "Welcome"
+   print("hello")
 
 def music():
-    return eng.say("""  I tried to stop but I can't stop
+   print("""  I tried to stop but I can't stop
                 I just can't stop thinking about her
                 I don't know
                 All I remember was, she wear the Skechers
