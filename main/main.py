@@ -8,7 +8,11 @@ engine = p.init()
 engine.say("Hello, Mitra How are you doing?")
 engine.runAndWait()
 with sr.Microphone() as source:
+<<<<<<< HEAD
     print("SPEAK NOW")
+=======
+    print("Speak now")
+>>>>>>> 52d728325322da557808117f671bf8d2816faf44
     text = r.listen(source)
 
     try:
