@@ -11,6 +11,6 @@ with sr.Microphone() as source:
         if recognised_text == 'hello':
             print('BOT : Hi THERE HUMAN')
     except sr.UnknownValueError:
-        print("")
+        print("e")
     except sr.RequestError:
         print("")
