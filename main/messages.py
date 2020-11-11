@@ -6,7 +6,7 @@ def greetings():
    print("hello")
 
 def music():
-   print("""  I tried to stop but I can't stop
+   a = eng.say("""  I tried to stop but I can't stop
                 I just can't stop thinking about her
                 I don't know
                 All I remember was, she wear the Skechers
@@ -20,3 +20,4 @@ def music():
                 Light up, light up Skechers
                 Light up, light up my world
                 I like your Skechers, you like me my Gucci shoes""")
+   return a
