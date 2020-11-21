@@ -1,23 +1,27 @@
 import pyttsx3 as p
+import speech_recognition as sr
+import os
 
+r = sr.Recognizer()
 eng = p.init()
+voices = eng.getProperty('voices')
+eng.setProperty('voice', voices[1].id)
+eng.setProperty('rate',150)
 
 def greetings():
-   print("hello")
+    eng.say("Go ahead I'm Hearing you")
+    eng.runAndWait()
 
-def music():
-   a = eng.say("""  I tried to stop but I can't stop
-                I just can't stop thinking about her
-                I don't know
-                All I remember was, she wear the Skechers
-                The light-up ones
-                Shawty bad with the Skechers on
-                Wanna hold your hand, make you my girl
-                Light up, light up Skechers
-                Light up, light up my world
-                Shawty bad with the Skechers on
-                Wanna hold your hand, make you my girl
-                Light up, light up Skechers
-                Light up, light up my world
-                I like your Skechers, you like me my Gucci shoes""")
-   return a
+def engine(voice):
+    eng.say(voice)
+    eng.runAndWait()
+
+def rec(source):
+    text = r.listen(source)
+    recognised_text = r.recognize_google(text)
+    print(recognised_text)
+    return recognised_text
+
+def agian():
+    eng.say("Try again!")
+    eng.runAndWait()

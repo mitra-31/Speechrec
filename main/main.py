@@ -9,12 +9,11 @@ engine.say("Hello, Mitra How are you doing?")
 engine.runAndWait()
 with sr.Microphone() as source:
     print("SPEAK NOW")
-    text = r.listen(source)
-
     try:
-        recognised_text = r.recognize_google(text)
-        if recognised_text == "music":
-            music()
+        recognised_text = rec(source)
+        if recognised_text == "hai":
+            a = "hello there!"
+            engine(a)
     except sr.UnknownValueError:
         print("Unknownvalueerror")
     except sr.RequestError:
