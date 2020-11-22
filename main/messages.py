@@ -28,11 +28,20 @@ def agian():
 
 
 def searching(file):
-    print("Searching" + file +"........")
-    for root,dir,files in os.walk('D://'):
-        for f in files:
-            if f == files:
-                eng.say("found")
-                eng.runAndWait()
+    print("Searching " + file +"........")
+    val = file.lower()
+    path = 'D:\VS-code'
+    con = True
+    while con:
+        for root,dir,files in os.walk(path):
+            for f in dir:
+                print(f)
+                if str(f) == str(val):
+                    print(os.path.join(path,val))
+                    con = False
+                    eng.say("found")
+                    eng.runAndWait()
+        break
+    else:
         eng.say("Not found")
-        eng.runAndWait()
+        eng.runAndWait()    
