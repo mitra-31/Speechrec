@@ -9,7 +9,7 @@ eng.setProperty('voice', voices[1].id)
 eng.setProperty('rate',150)
 
 def greetings():
-    eng.say("Go ahead I'm Hearing you")
+    eng.say("Hi there! I'm Rax Your PERSONAL ASSISTANCE")
     eng.runAndWait()
 
 def engine(voice):
@@ -23,5 +23,16 @@ def rec(source):
     return recognised_text
 
 def agian():
-    eng.say("Try again!")
+    eng.say("TELL SOMETHING")
     eng.runAndWait()
+
+
+def searching(file):
+    print("Searching" + file +"........")
+    for root,dir,files in os.walk('D://'):
+        for f in files:
+            if f == files:
+                eng.say("found")
+                eng.runAndWait()
+        eng.say("Not found")
+        eng.runAndWait()
